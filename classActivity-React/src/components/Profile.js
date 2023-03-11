@@ -1,10 +1,10 @@
 import ProfilePic from "./ProfilePic"
 import Descriptions from "./Descriptions"
 
-export default function Profile (props) {
+export default function Profile ({user}) {
     return <>
-        {<ProfilePic id={props.id} />}
-        {<Descriptions firstName={props.firstName} classLevel={props.classLevel} lastName={props.lastName} email={props.email} school={props.school} />}
+        {<ProfilePic id={user.profilePicture} />}
+        {<Descriptions firstName={user.firstName} classLevel={user.classLevel} lastName={user.lastName} email={user.email} school={user.school} />}
         {<hr style={{margin:'0px'}}></hr>}
     </>
 }
